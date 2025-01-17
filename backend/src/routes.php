@@ -1,3 +1,3 @@
 <?php
-require_once 'routes/courseRoutes.php';
+require_once __DIR__ . '/routes/CourseRoutes.php';
 ?>

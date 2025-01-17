@@ -2,13 +2,13 @@
 
 class Course
 {
-    private ?int $id;
     private string $title;
     private string $description;
     private string $image;
     private string $buttonLink;
+    private ?int $id;
 
-    public function __construct(?int $id = null, string $title, string $description, string $image, string $buttonLink)
+    public function __construct( string $title, string $description, string $image, string $buttonLink, ?int $id = null)
     {
         $this->id = $id;
         $this->title = $title;

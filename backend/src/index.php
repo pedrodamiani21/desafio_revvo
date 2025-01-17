@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // O resto do seu código PHP, como a inclusão de arquivos e o roteamento
-require_once __DIR__ . '/routes.php';
+require_once  'routes.php';
 
 // Aqui, você pode continuar a lógica da sua API, como de costume.
 ?>

@@ -1,14 +1,9 @@
 <?php
 
-require_once 'Controllers/CourseController.php';
-require_once 'Services/CourseService.php';
-require_once 'Repositories/InMemoryCourseRepository.php';
-require_once 'Repositories/CourseRepository.php';
-
-require_once 'Controllers/CourseController.php';
-require_once 'Services/CourseService.php';
-require_once 'Repositories/InMemoryCourseRepository.php';
-require_once 'Repositories/CourseRepository.php';
+require_once 'controllers/CourseController.php';
+require_once 'services/CourseService.php';
+require_once 'repositories/InMemoryCourseRepository.php';
+require_once 'repositories/CourseRepository.php';
 
 $courseRepository = new InMemoryCourseRepository();
 $courseService = new CourseService($courseRepository);
