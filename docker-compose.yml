@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8870:8870"
+    volumes:
+      - ./backend:/var/www/html
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/usr/local/apache2/htdocs
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
