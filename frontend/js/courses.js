@@ -15,8 +15,8 @@ async function renderCourses(filter) {
                     <h2 class="card-subtitle">${course.description}</h2>
                 </div>
                 <div class="button-container">
-                    <button>
-                        <a href="${course.buttonLink}" style="text-decoration: none; color: inherit;" target="_blank">Ver Curso</a>
+                    <button onclick="handleButtonClick('${course.buttonLink}')">
+                        Ver Curso
                     </button>
                 </div>
             </div>
@@ -62,6 +62,9 @@ function filterCourses() {
     const search = searchInput.value.toLowerCase();
 
     renderCourses(search);
+}
+function handleButtonClick(link) {
+    window.open(link, "_blank", "noopener,noreferrer");
 }
 
 renderCourses(); 
