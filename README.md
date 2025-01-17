@@ -1,61 +1,79 @@
-# desafio_revvo
+Projeto Fullstack com PHP, Docker e Frontend
 
-# Projeto API com PHP e Docker
+Desenvolvedor
 
-## Desenvolvedor
-**Pedro Henrique Damiani Araldi**
+Pedro Henrique Damiani Araldi
 
-## Descrição
-Este projeto é uma API criada em PHP que segue padrões de SOLID. Ela utiliza uma arquitetura modular com entidades, contratos, repositórios e controladores. O projeto também está configurado para uso com Docker, o que facilita a execução e manutenção do ambiente.
+Descrição
 
-## Requisitos
-- Docker
-- Docker Compose
+Este projeto é uma aplicação fullstack composta por uma API backend desenvolvida em PHP, seguindo padrões de SOLID, e uma interface frontend para interação com os dados. O backend utiliza uma arquitetura modular com entidades, contratos, repositórios e controladores. O frontend está integrado e utiliza tecnologias modernas para criar uma interface amigável e responsiva. O projeto está configurado para ser executado com Docker, facilitando a configuração e manutenção do ambiente.
 
-## Como executar o projeto
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd seu-repositorio
-   ```
-3. Execute o comando para iniciar o ambiente Docker:
-   ```bash
-   docker-compose up --build
-   ```
-4. A API estará disponível em: `http://localhost:8870`
+Requisitos
 
-## Rotas da API
+Docker
 
-### **GET** `/courses`
+Docker Compose
+
+Como executar o projeto
+
+Clone este repositório:
+
+git clone https://github.com/pedrodamiani21/desafio_revvo
+
+Navegue até o diretório do projeto:
+
+cd seu-repositorio
+
+Execute o comando para iniciar o ambiente Docker:
+
+docker-compose up --build
+
+A API estará disponível em: http://localhost:8000
+
+O frontend estará disponível em: http://localhost:3000
+
+Rotas da API
+
+GET /courses
+
 Lista todos os cursos, com suporte a filtros opcionais.
 
-### **GET** `/courses/{id}`
+GET /courses/{id}
+
 Retorna os detalhes de um curso específico pelo ID.
 
-### **POST** `/courses`
+POST /courses
+
 Cria um novo curso. O corpo da requisição deve conter os dados necessários para criação.
 
-### **PUT** `/courses/{id}`
+PUT /courses/{id}
+
 Atualiza um curso existente pelo ID. O corpo da requisição deve conter os dados a serem atualizados.
 
-### **DELETE** `/courses/{id}`
+DELETE /courses/{id}
+
 Exclui um curso específico pelo ID.
 
-### **Erro 404**
+Erro 404
+
 Caso a rota não seja encontrada, a API retorna:
-```json
+
 {
   "error": "Route not found."
 }
-```
 
-## Estrutura do Projeto
-- **controllers/**: Contém os controladores responsáveis por lidar com as requisições.
-- **services/**: Contém a lógica de negócio.
-- **repositories/**: Implementações de repositório, incluindo repositórios em memória.
+Estrutura do Projeto
 
-5. Frontend disponível em: `http://localhost:3000`
+Backend
 
+controllers/: Contém os controladores responsáveis por lidar com as requisições.
+
+services/: Contém a lógica de negócio.
+
+repositories/: Implementações de repositório, incluindo repositórios em memória.
+
+Frontend
+
+Aplicação frontend desenvolvida para consumir as rotas da API e fornecer uma interface amigável ao usuário.
+
+Configuração para execução em http://localhost:3000.
