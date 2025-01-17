@@ -35,7 +35,7 @@ class InMemoryCourseRepository implements CourseRepository
     {
         foreach ($this->courses as $course) {
             if ($course['id'] === $id) {
-                return new Course($course['id'], $course['title'], $course['description'], $course['image'], $course['buttonLink']);
+                return new Course( $course['title'], $course['description'], $course['image'], $course['buttonLink'], $course['id']);
             }
         }
         return null;
@@ -45,11 +45,11 @@ class InMemoryCourseRepository implements CourseRepository
     {
         $id = (int) $this->getNextId();
         $newCourse = [
-            'id' => $id,
             'title' => $course->getTitle(),
             'description' => $course->getDescription(),
             'image' => $course->getImage(),
-            'buttonLink' => $course->getButtonLink()
+            'buttonLink' => $course->getButtonLink(),
+            'id' => $id,
         ];
 
         $this->courses[] = $newCourse;
@@ -64,11 +64,11 @@ class InMemoryCourseRepository implements CourseRepository
             if ($existingCourse['id'] == $course->getId()) {
                 $updated = true;  
                 return [
-                    'id' => $course->getId(),
                     'title' => $course->getTitle(),
                     'description' => $course->getDescription(),
                     'image' => $course->getImage(),
-                    'buttonLink' => $course->getButtonLink()
+                    'buttonLink' => $course->getButtonLink(),
+                    'id' => $course->getId(),
                 ];
             }
             return $existingCourse;

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Repositories/CourseRepository.php';
+require_once 'repositories/CourseRepository.php';
 
 class CourseService
 {
@@ -38,11 +38,10 @@ class CourseService
         }
     
         $course = new Course(
-            null,
             $data['title'],
             $data['description'],
             $data['image'],
-            $data['buttonLink']
+            $data['buttonLink'],
         );
     
         $this->courseRepository->save($course);
@@ -54,11 +53,11 @@ class CourseService
             throw new Exception('O ID do curso é obrigatório.');
         }
         $course = new Course(
-            $id,
             $data['title'],
             $data['description'],
             $data['image'],
-            $data['buttonLink']
+            $data['buttonLink'],
+            $id,
         );
         $this->courseRepository->update($course);
     }
