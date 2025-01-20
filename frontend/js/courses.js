@@ -36,7 +36,6 @@ async function getCourses(filter) {
     try {
         const url = new URL('http://localhost:8870/courses');
         
-        // Se houver filtros, adiciona-os à URL como parâmetros
         if (filter) {
             url.searchParams.append('filter', filter);
         }

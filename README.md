@@ -22,13 +22,13 @@ git clone https://github.com/pedrodamiani21/desafio_revvo
 
 Navegue até o diretório do projeto:
 
-cd seu-repositorio
+cd desafio_revvo
 
 Execute o comando para iniciar o ambiente Docker:
 
 docker-compose up --build
 
-A API estará disponível em: http://localhost:8000
+A API estará disponível em: http://localhost:8870
 
 O frontend estará disponível em: http://localhost:3000
 

@@ -27,7 +27,7 @@ header {
     flex: 1;
     margin: 0 20px;
     display: flex;
-    justify-content: flex-end; /* Alinha a barra de pesquisa à direita */
+    justify-content: flex-end;
 }
 
 .search-bar input {
@@ -65,7 +65,7 @@ header {
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
-    position: relative; /* Garantir que a sobreposição se posicione corretamente */
+    position: relative; 
 }
 
 .carousel-slide img {
