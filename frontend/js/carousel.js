@@ -51,13 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-next');
     let currentSlide = 0;
 
-    // Criando indicadores para cada slide
     slides.forEach(() => {
         const indicator = document.createElement('span');
         indicators.appendChild(indicator);
     });
 
-    // Atualizando o carrossel
     function updateCarousel() {
         const track = document.querySelector('.carousel-track');
         track.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -70,19 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCarousel();
 
-    // Navegação anterior
     prevButton.addEventListener('click', () => {
         currentSlide = (currentSlide === 0) ? slides.length - 1 : currentSlide - 1;
         updateCarousel();
     });
 
-    // Navegação próxima
     nextButton.addEventListener('click', () => {
         currentSlide = (currentSlide === slides.length - 1) ? 0 : currentSlide + 1;
         updateCarousel();
     });
 
-    // Indicadores de navegação
     indicators.addEventListener('click', (e) => {
         if (e.target.tagName === 'SPAN') {
             currentSlide = Array.from(indicators.children).indexOf(e.target);
