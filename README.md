@@ -18,11 +18,11 @@ Como executar o projeto
 
 Clone este repositório:
 
-git clone https://github.com/pedrodamiani21/desafio_revvo
+git clone https://github.com/pedrodamiani21/fullstack_php_course_app
 
 Navegue até o diretório do projeto:
 
-cd desafio_revvo
+cd fullstack_php_course_app
 
 Execute o comando para iniciar o ambiente Docker:
 
